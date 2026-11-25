@@ -12,5 +12,5 @@ __pycache__/
 .env
 
 # Jupyter y herramientas de testing
-.ipynb_checkpoints/
+.ipynb_ch11eckpoints/
 .pytest_cache/

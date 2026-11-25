@@ -361,7 +361,7 @@ def validar_entrada(linea):
     Efecto: Separa los 6 campos por ';' y valida tanto el formato como la semántica de cada uno.
     Resultado: Diccionario con los datos normalizados y la línea original, o None si algún campo falla.
     """
-    linea_sin_salto = linea.rstrip('\r\n')
+    linea_sin_salto = linea.strip('\r\n')
     if not linea_sin_salto.strip():
         return None
 
