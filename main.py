@@ -25,8 +25,6 @@ def mostrar_errores_exit():
     print("  python main.py -intervalo <fichero> <desde> <hasta>")
     exit(1)
 
-PATRON_TEL_NORMALIZADO = re.compile(r"\+34\d{9}")
-
 def tiempo_a_lista(t_dict):
     """
     Precondición: t_dict es un diccionario de tiempo válido.
