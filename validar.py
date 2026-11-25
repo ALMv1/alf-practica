@@ -259,15 +259,6 @@ def obtener_cadena_tiempo(t, formato):
     return ""
 
 
-def mostrar_tiempo(t, formato):
-    """
-    Precondición: t es un diccionario de tiempo válido; formato es 1, 2 o 3.
-    Efecto: Imprime por pantalla el instante temporal formateado.
-    Resultado: None.
-    """
-    print(obtener_cadena_tiempo(t, formato))
-
-
 def decimal_a_sexagesimal(val_decimal):
     """
     Precondición: val_decimal es un número real en grados decimales.
@@ -332,15 +323,6 @@ def obtener_cadena_coordenada(c, formato):
         return f"{g_lat:03d}{m_lat:02d}{s_lat:07.4f}{o_lat}{g_lon:03d}{m_lon:02d}{s_lon:07.4f}{o_lon}"
 
     return ""
-
-
-def mostrar_coordenada(c, formato):
-    """
-    Precondición: c es un diccionario de coordenadas válido; formato es 1, 2 o 3.
-    Efecto: Imprime por pantalla las coordenadas formateadas.
-    Resultado: None.
-    """
-    print(obtener_cadena_coordenada(c, formato))
 
 
 def validar_precio(precio):
