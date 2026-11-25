@@ -153,7 +153,7 @@ def main():
     Resultado: None (termina con exit(1) ante cualquier error de argumentos).
     """
     if len(sys.argv) < 3:
-        exit(1)
+        mostrar_errores_exit()
 
     modo = sys.argv[1]
     fichero = sys.argv[2]
@@ -168,32 +168,32 @@ def main():
                 if 1 <= f1 <= 3 and 1 <= f2 <= 3:
                     opcion_normaliza(fichero, f1, f2)
                 else:
-                    exit(1)
+                    mostrar_errores_exit()
             except ValueError:
-                exit(1)
+                mostrar_errores_exit()
         else:
-            exit(1)
+            mostrar_errores_exit()
 
     elif modo == "-telefono":
         if len(sys.argv) == 4:
             opcion_telefono(fichero, sys.argv[3])
         else:
-            exit(1)
+            mostrar_errores_exit()
 
     elif modo == "-nif":
         if len(sys.argv) == 4:
             opcion_nif(fichero, sys.argv[3])
         else:
-            exit(1)
+            mostrar_errores_exit()
 
     elif modo == "-intervalo":
         if len(sys.argv) == 5:
             opcion_intervalo(fichero, sys.argv[3], sys.argv[4])
         else:
-            exit(1)
+            mostrar_errores_exit()
 
     else:
-        exit(1)
+        mostrar_errores_exit()
 
 
 if __name__ == "__main__":
