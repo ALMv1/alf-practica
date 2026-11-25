@@ -9,20 +9,23 @@ from validar import (
 )
 
 
+"""
+Precondición: Ninguna.
+Efecto: Muestra por pantalla el uso correcto del programa y finaliza la ejecución con código 1.
+Resultado: None.
+"""
 def mostrar_errores_exit():
-    """
-    Precondición: Ninguna.
-    Efecto: Muestra por pantalla el uso correcto del programa y finaliza la ejecución con código 1.
-    Resultado: None.
-    """
+
     print("Error de sintaxis al invocar.")
     print("Formato esperado:")
+
     print("  python main.py -normaliza <fichero> [<f1> <f2>]")
     print("  python main.py -telefono <fichero> <telefono>")
     print("  python main.py -nif <fichero> <NIF>")
     print("  python main.py -intervalo <fichero> <desde> <hasta>")
     exit(1)
 
+PATRON_TEL_NORMALIZADO = re.compile(r"\+34\d{9}")
 
 def tiempo_a_lista(t_dict):
     """
