@@ -9,9 +9,6 @@ from sesion7 import (
     validar_tiempo
 )
 
-PATRON_TEL_NORMALIZADO = re.compile(r"\+34\d{9}")
-
-
 def tiempo_a_lista(t_dict):
     """
     Precondición: t_dict es un diccionario de tiempo válido.
