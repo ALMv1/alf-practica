@@ -192,7 +192,7 @@ def sexagesimal_a_decimal(grados, minutos, segundos, orientacion):
     Efecto: Comprueba que minutos y segundos estén en [0, 60) y convierte la coordenada a grados decimales.
     Resultado: Valor float con signo según la orientación, o None si los minutos/segundos son inválidos.
     """
-    if minutos >= 60 or segundos >= 60:
+    if grados > 180 or minutos >= 60 or segundos >= 60:
         return None
 
     valor = grados + (minutos / 60.0) + (segundos / 3600.0)
