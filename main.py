@@ -142,16 +142,8 @@ def main():
     if modo == "-normaliza":
         if len(sys.argv) == 3:
             opcion_normaliza(fichero, 2, 3)
-        elif len(sys.argv) == 5:
-            try:
-                f1 = int(sys.argv[3])
-                f2 = int(sys.argv[4])
-                if 1 <= f1 <= 3 and 1 <= f2 <= 3:
-                    opcion_normaliza(fichero, f1, f2)
-                else:
-                    mostrar_errores_exit()
-            except ValueError:
-                mostrar_errores_exit()
+        elif len(sys.argv) == 5 and sys.argv[3] in ['1', '2', '3'] and sys.argv[4] in ['1', '2', '3']:
+            opcion_normaliza(fichero, int(sys.argv[3]), int(sys.argv[4]))
         else:
             mostrar_errores_exit()
 
